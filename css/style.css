@@ -57,16 +57,31 @@ body {
     margin-top: 5%;
 }
 
+/* .featured-works article img {
+    border: 1px #ccc solid;
+    padding: 10px;
+} */
+
+.work-images {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+
+.work-img {
+    padding: 20px;
+}
+
 .featured-works h2 {
     margin-bottom: 2%;
 }
 
-.work-img {
+/* .work-img {
     width: 30%;
     float: left;
     padding: 1.67%;
     box-sizing: border-box;
-}
+} */
 
 .sec {
     margin-bottom: 2%;
@@ -77,22 +92,67 @@ body {
     margin-bottom: 5%;
 }
 
+/* .sec .work-options {
+    border: 1px #ccc solid;
+    padding: 10px;
+} */
+
+.work-section {
+    display: flex;
+}
+
 .work-options {
+    flex: 1;
+    line-height: 2.25em;
+    text-align: justify;
+    padding: 20px;
+}
+
+.work-options h2 {
+    margin-bottom: 10px;
+}
+
+/* .sec .img-border {
+    border: 1px #ccc solid;
+    padding: 10px;
+} */
+
+.img-options {
+    display: flex;
+}
+
+.selfImage {
+    width: 100%;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.selfInfo {
+    background: #6c6c74;
+    color: #fff;
+    line-height: 2.5em;
+    align-self: flex-end;
+    text-align: justify;
+}
+
+/* .work-options {
     width: 30%;
     float: left;
     line-height: 2.25em;
     padding: 1.67%;
     box-sizing: border-box;
-}
+} */
 
+
+/* 
 .selfImage {
     float: left;
     width: 50%;
     padding-right: 0 20px;
     box-sizing: border-box;
-}
+} MAKE IMAGE CIRCEL */
 
-.selfInfo {
+/* .selfInfo {
     float: right;
     width: 50%;
     background: #6c6c74;
@@ -101,13 +161,29 @@ body {
     padding: 50px;
     margin-top: 50px;
     box-sizing: border-box;
-}
+} */
 
 .selfInfo p {
     margin: 20px;
 }
 
-.contact {
+/* .sec .con-bod {
+    border: 1px #ccc solid;
+    padding: 10px;
+} */
+
+.contact-section {
+    display: flex;
+}
+
+.con-bod {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+
+
+/* .contact {
     float: left;
     width: 50%;
     padding-right: 0 20px;
@@ -118,7 +194,7 @@ body {
     float: right;
     width: 50%;
     box-sizing: border-box;
-}
+} */
 
 .form-body label {
     display: block;
@@ -130,11 +206,12 @@ body {
 .form-body input[type="text"], .form-body input[type="email"] {
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 95%;
+    width: 90%;
 }
 
 .form-body textarea {
-    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 90%;
 }
 
