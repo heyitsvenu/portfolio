@@ -126,19 +126,26 @@ body {
 }
 
 .selfImage {
+    flex: 1;
     width: 100%;
     height: 100%;
     min-width: 0;
-    border-radius: 50%;
+		/* border-radius: 70%; */
+		/* flex-basis: 100%; */
     align-self: center;
 }
 
 .selfInfo {
+		flex: 1;
+		flex-basis: 100%;
     background: #6c6c74;
     color: #fff;
     line-height: 2.5em;
-    align-self: flex-end;
+    align-self: stretch;
     text-align: justify;
+    padding: 20px;
+		margin-top: 20px;
+		margin-bottom: 20px;
 }
 
 /* .work-options {
@@ -187,6 +194,9 @@ body {
     flex-basis: 0;
 }
 
+.con-bod h2 {
+    margin-bottom: 20px;
+}
 
 
 /* .contact {
@@ -232,4 +242,60 @@ body {
     font-size: .88889em;
     font-weight: 700;
     box-sizing: border-box;
+}
+
+@media (max-width: 960px){
+	.container{
+		width: 95%;
+	}
+
+	.work-images, .work-section, .img-options, .contact-section{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.img-options{
+		flex-direction: column-reverse;
+	}
+
+	.selfImage{
+		flex-basis: 100%;
+	}
+
+	.selfInfo{
+		flex-basis: 100%;
+		margin: -10px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	.form-body{
+		margin-top: 30px;
+	}
+
+	.form-body h2{
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width: 960px) and (max-width: 1440px){
+	.img-options{
+		display: flex;
+		flex-direction: row;
+	}
+
+	.selfImage{
+		flex-basis: 100%;
+	}
+
+	.selfInfo{
+		flex-basis: 100%;
+	}
+
+	.selfInfo{
+		margin: -10px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		order: 2;
+	}
 }
