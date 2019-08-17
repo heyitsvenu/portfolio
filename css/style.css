@@ -244,6 +244,8 @@ body {
     box-sizing: border-box;
 }
 
+
+/* Media Queries */
 @media (max-width: 960px){
 	.container{
 		width: 95%;
