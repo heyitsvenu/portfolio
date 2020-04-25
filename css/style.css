@@ -1,5 +1,7 @@
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -43,7 +45,6 @@ body {
 
 .main-header {
     text-align: center;
-    margin: 5%;
 }
 
 .intro {
@@ -57,35 +58,27 @@ body {
     margin-top: 5%;
 }
 
-/* .featured-works article img {
-    border: 1px #ccc solid;
-    padding: 10px;
-} */
-
 .work-images {
     display: flex;
-    align-items: stretch;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .work-img {
-    /* flex: 1; */
-    width: 100%; /*chrome bug fix*/
-    height: 100%; /*chrome bug fix*/
-    min-width: 0; /*chrome bug fix*/
+    flex-basis: 100%;
+    flex: 1;
     padding: 20px;
+}
+
+.work-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .featured-works h2 {
     margin-bottom: 2%;
 }
-
-/* .work-img {
-    width: 30%;
-    float: left;
-    padding: 1.67%;
-    box-sizing: border-box;
-} */
 
 .sec {
     margin-bottom: 2%;
@@ -96,13 +89,10 @@ body {
     margin-bottom: 5%;
 }
 
-/* .sec .work-options {
-    border: 1px #ccc solid;
-    padding: 10px;
-} */
-
 .work-section {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .work-options {
@@ -116,101 +106,59 @@ body {
     margin-bottom: 10px;
 }
 
-/* .sec .img-border {
-    border: 1px #ccc solid;
-    padding: 10px;
-} */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .img-options {
     display: flex;
+    flex-wrap: wrap;
+    width: 70%;
 }
 
-.selfImage {
+.img-options .img-border {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
     flex: 1;
+}
+
+.img-options .selfImage,
+.img-options .selfInfo {
+    height: 100%;
+}
+
+.img-options img {
     width: 100%;
     height: 100%;
-    min-width: 0;
-		/* border-radius: 70%; */
-		/* flex-basis: 100%; */
-    align-self: center;
+    object-fit: cover;
 }
 
-.selfInfo {
-		flex: 1;
-		flex-basis: 100%;
+.img-options .selfInfo {
+    display: flex;
+    flex-direction: column;
     background: #6c6c74;
     color: #fff;
     line-height: 2.5em;
-    align-self: stretch;
+    align-items: center;
+    justify-content: center;
     text-align: justify;
     padding: 20px;
-		margin-top: 20px;
-		margin-bottom: 20px;
 }
-
-/* .work-options {
-    width: 30%;
-    float: left;
-    line-height: 2.25em;
-    padding: 1.67%;
-    box-sizing: border-box;
-} */
-
-
-/* 
-.selfImage {
-    float: left;
-    width: 50%;
-    padding-right: 0 20px;
-    box-sizing: border-box;
-} MAKE IMAGE CIRCEL */
-
-/* .selfInfo {
-    float: right;
-    width: 50%;
-    background: #6c6c74;
-    color: #fff;
-    line-height: 2.5em;
-    padding: 50px;
-    margin-top: 50px;
-    box-sizing: border-box;
-} */
-
-.selfInfo p {
-    margin: 20px;
-}
-
-/* .sec .con-bod {
-    border: 1px #ccc solid;
-    padding: 10px;
-} */
 
 .contact-section {
     display: flex;
 }
 
 .con-bod {
-    flex-grow: 1;
-    flex-basis: 0;
+    flex: 1;
 }
 
 .con-bod h2 {
     margin-bottom: 20px;
 }
-
-
-/* .contact {
-    float: left;
-    width: 50%;
-    padding-right: 0 20px;
-    box-sizing: border-box;
-}
-
-.form-body {
-    float: right;
-    width: 50%;
-    box-sizing: border-box;
-} */
 
 .form-body label {
     display: block;
@@ -247,9 +195,6 @@ body {
 
 /* Media Queries */
 @media (max-width: 960px){
-	.container{
-		width: 95%;
-	}
 
 	.work-images, .work-section, .img-options, .contact-section{
 		display: flex;
@@ -257,47 +202,17 @@ body {
 	}
 
 	.img-options{
-		flex-direction: column-reverse;
-	}
+        flex-direction: column-reverse;
+        width: 100%;
+    }
 
-	.selfImage{
-		flex-basis: 100%;
-	}
-
-	.selfInfo{
-		flex-basis: 100%;
-		margin: -10px;
-		padding-top: 5px;
-		padding-bottom: 5px;
-	}
-
-	.form-body{
-		margin-top: 30px;
-	}
-
-	.form-body h2{
-		margin-bottom: 0;
-	}
+    .sec .contact {
+        margin-bottom: 30px;
+    }
 }
 
-@media (min-width: 960px) and (max-width: 1440px){
-	.img-options{
-		display: flex;
-		flex-direction: row;
-	}
-
-	.selfImage{
-		flex-basis: 100%;
-	}
-
-	.selfInfo{
-		flex-basis: 100%;
-	}
-
-	.selfInfo{
-		margin: -10px;
-		padding-top: 5px;
-		padding-bottom: 5px;
-		order: 2;
-	}
+@media (min-width: 961px) and (max-width: 1440px) {
+    .img-options{
+        width: 85%;
+    }
 }
