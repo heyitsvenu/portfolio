@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.css" integrity="sha256-2SjB4U+w1reKQrhbbJOiQFARkAXA5CGoyk559PJeG58=" crossorigin="anonymous" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Venu Gopal Reddy</title>
 	<link rel="icon" href="images/Logo2.png" type = "image/x-icon">
@@ -19,48 +20,42 @@
 		<main class="main-header">
 			<h1 class="intro">Hi! Check out my work, and get in touch below</h1>
 		</main>
-	</div>
-	<div class="container">
-	<section class="featured-works">
-		<h2>Featured works</h2>
-		<article class="work-images">
-			<div class="work-img">
-				<img  src="images/rpi.png" alt="homepage screenshot">
-			</div>
-			<div class="work-img">
-				<img  src="images/rpi2.png" alt="servicepage screenshot">
-			</div>
-			<!-- <img class="work-img" src="" alt=""> -->
-		</article>
-	</section>
-	</div>
-	<div class="clr"></div>
-	<div class="hor-line"></div>
-	<div class="container">
+		<section class="featured-works">
+			<h2>Featured works</h2>
+			<article class="work-images">
+				<div class="work-img">
+					<img  src="images/rpi.png" alt="homepage screenshot">
+				</div>
+				<div class="work-img">
+					<img  src="images/rpi2.png" alt="servicepage screenshot">
+				</div>
+				<!-- <img class="work-img" src="" alt=""> -->
+			</article>
+		</section>
+		<div class="hor-line"></div>
 		<!-- Work Header -->
 		<section class="sec" id="work"> 
 			<h2 class="section-header">My Work</h2>
 			<div class="work-section">
 				<article class="work-options">
-					<h2>Hire Me</h2>
+					<h2><i class="fas fa-handshake"></i> Hire Me</h2>
 					<p>In my college curriculum, I contributed to numerous projects that helped me to build my skills as
 						a web developer. I am now looking for a full-time job. See my contact information below and get
 						in touch.</p>
 				</article>
 				<article class="work-options">
-					<h2>Work With Me</h2>
+					<h2><i class="fas fa-briefcase"></i> Work With Me</h2>
 					<p>My skills and specialities include writing efficient front-end coding using javascript, building
 						responsive layouts using latest html/css techniques, managing databases and connecting them to
 						the application. I am also a quick learner and can adapt to any role.</p>
 				</article>
 				<article class="work-options">
-					<h2>Follow Me</h2>
+					<h2><i class="fas fa-location-arrow"></i> Follow Me</h2>
 					<p>My portfolio showcases various work I have done till now. Subscribe to my site for my upcoming
 						works.</p>
 				</article>
 			</div>
 		</section>
-		<div class="clr"></div>
 		<div class="hor-line"></div>
 		<!-- Image Section -->
 		<section class="sec" id="about">
@@ -84,7 +79,6 @@
 				</div>
 			</div>
 		</section>
-		<div class="clr"></div>
 		<div class="hor-line"></div>
 		<!-- Contact Section -->
 		<section class="sec">
@@ -98,34 +92,32 @@
 					<p>venu6696@gmail.com</p>
 				</article>
 				<article class="con-bod form-body">
-					<form action="">
-						<h2>Send Me a Message</h2>
+					<h2>Send Me a Message</h2>
+					<form action="www.google.com" method="POST">
 						<div>
 							<label for="">Name</label>
-							<input type="text">
+							<input type="text" name="name">
 						</div>
 						<div>
 							<label for="">Email</label>
-							<input type="email">
+							<input type="email" name="email">
 						</div>
 						<div>
-							<label for="">Website</label>
-							<input type="text">
+							<label for="">Phone</label>
+							<input type="text" name="phone">
 						</div>
 						<div>
 							<label for="">Message</label>
-							<textarea></textarea>
+							<textarea name="message"></textarea>
 						</div>
 						<div>
-							<input type="submit" value="Submit">
+							<button type="submit">Submit</button>
 						</div>
 					</form>
-					<article>
+				</article>
 			</div>
 		</section>
-		<div class="clr"></div>
 		<div class="hor-line"></div>
 	</div>
 </body>
-
 </html>
